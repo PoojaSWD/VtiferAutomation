@@ -1,0 +1,34 @@
+package Basic;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FaceBookSignUP {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.facebook.com/signup");
+		Thread.sleep(2000);
+		driver.findElement(By.name("firstname")).sendKeys("Anvika");
+		Thread.sleep(2000);
+		driver.findElement(By.name("lastname")).sendKeys("Dusane");
+		Thread.sleep(2000);
+		driver.findElement(By.name("reg_email__")).sendKeys("9156424824");
+		Thread.sleep(2000);
+		driver.findElement(By.name("reg_passwd__")).sendKeys("Pune@123");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@value='1']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[text()='Sign Up'][1]")).click();
+		
+
+
+WebElement element = driver.findElement(By.id("Accounts_editView_fieldName_notify_owner"));
+//		Actions actions = new Actions(driver);
+//		actions.moveToElement(element).click().build().perform();
+
+	}
+
+}
